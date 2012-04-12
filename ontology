@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<!DOCTYPE rdf:RDF [
+    <!ENTITY scp "http://scpproject.org/ontology#" >
+    <!ENTITY owl "http://www.w3.org/2002/07/owl#" >
+    <!ENTITY xsd "http://www.w3.org/2001/XMLSchema#" >
+    <!ENTITY xml "http://www.w3.org/XML/1998/namespace" >
+    <!ENTITY rdfs "http://www.w3.org/2000/01/rdf-schema#" >
+    <!ENTITY rdf "http://www.w3.org/1999/02/22-rdf-syntax-ns#" >
+]>
+<rdf:RDF
+     xmlns:scp="http://scpproject.org/ontology#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace">
+    
+    <owl:ObjectProperty rdf:about="&scp;inPackage">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:range rdf:resource="&scp;Package"/>
+        <rdfs:domain rdf:resource="&scp;PackagePath"/>
+    </owl:ObjectProperty>
+    
+    <owl:ObjectProperty rdf:about="&scp;location">
+        <rdfs:domain rdf:resource="&scp;Bytestream"/>
+        <rdfs:range rdf:resource="&scp;ContentLocation"/>
+    </owl:ObjectProperty>
+
+    <owl:ObjectProperty rdf:about="&scp;type">
+        <rdfs:domain rdf:resource="&scp;Package"/>
+        <rdfs:range rdf:resource="&scp;PackageType"/>
+    </owl:ObjectProperty>
+
+    <owl:DatatypeProperty rdf:about="&scp;path">
+        <rdf:type rdf:resource="&owl;FunctionalProperty"/>
+        <rdfs:domain rdf:resource="&scp;PackagePath"/>
+        <rdfs:range rdf:resource="&rdf;PlainLiteral"/>
+    </owl:DatatypeProperty>
+    
+    <owl:Class rdf:about="&scp;Bytestream"/>
+    
+    <owl:Class rdf:about="&scp;ContentLocation"/>
+    
+    <owl:Class rdf:about="&scp;Package"/>
+    
+    <owl:Class rdf:about="&scp;PackagePath">
+        <rdfs:subClassOf rdf:resource="&scp;ContentLocation"/>
+    </owl:Class>
+    
+    <owl:Class rdf:about="&scp;PackageType"/>
+    
+    <owl:Class rdf:about="&scp;ResolvableURI">
+        <rdfs:subClassOf rdf:resource="&scp;ContentLocation"/>
+    </owl:Class>
+</rdf:RDF>
