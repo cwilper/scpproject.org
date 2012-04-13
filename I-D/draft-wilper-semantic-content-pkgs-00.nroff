@@ -60,25 +60,25 @@ This document is subject to BCP 78 and the IETF Trust's Legal Provisions Relatin
 Table of Contents
 
 .nf
-   1. Introduction ....................................................?
-      1.1. Motivation .................................................?
-      1.2. Notational Conventions .....................................?
-   2. The SCP Data Structure ..........................................?
-   3. The SCP RDF Vocabulary ..........................................?
-      3.1. Bytestream .................................................?
-      3.2. ContentLocation ............................................?
-           3.2.1. ResolvableURI .......................................?
-           3.2.2. PackagePath .........................................?
-      3.3. Package ....................................................?
-      3.4. PackageType ................................................?
-   4. The SCP Format ..................................................?
-      4.1. Directory Structure ........................................?
-      4.2. ZIP-based Serialization ....................................?
-      4.3. Examples ...................................................?
-   5. IANA Considerations .............................................?
-   6. Security Considerations .........................................?
-   7. Normative References ............................................?
-   Appendix A.  SCP-OWL-Ontology.ttl ..................................?
+   1. Introduction ....................................................2
+      1.1. Motivation .................................................2
+      1.2. Notational Conventions .....................................3
+   2. The SCP Data Structure ..........................................3
+   3. The SCP RDF Vocabulary ..........................................3
+      3.1. Bytestream .................................................3
+      3.2. ContentLocation ............................................3
+           3.2.1. ResolvableURI .......................................4
+           3.2.2. PackagePath .........................................4
+      3.3. Package ....................................................4
+      3.4. PackageType ................................................4
+   4. The SCP Format ..................................................4
+      4.1. Directory Structure ........................................4
+      4.2. ZIP-based Serialization ....................................4
+      4.3. Examples ...................................................5
+   5. IANA Considerations .............................................6
+   6. Security Considerations .........................................6
+   7. Normative References ............................................6
+   Appendix A.  SCP-OWL-Ontology.ttl ..................................7
 .fi
 
 .in 3
@@ -185,7 +185,7 @@ The ZIP file is structured such that unzipping it will instantiate the package i
 .ti 0
 4.3.  Examples
 
-The following examples show packages
+The following examples show packages in a directory structure.  They may be trivially serialized a .scp files or stored in some other structure as well.
 
 .ti 0
 4.3.1.  A Minimal Package
@@ -294,9 +294,6 @@ SUBM-turtle-20110328, March 2011,
 
 Latest version available at
 <http://www.w3.org/TeamSubmission/turtle/>.
-.\" This is just an example. The reference entries for all RFCs,
-.\" formatted in the style of the RFC Editor are available here:
-.\" ftp://ftp.rfc-editor.org/in-notes/rfc-ref.txt
 
 .in 3
 

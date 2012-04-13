@@ -112,25 +112,25 @@ Internet Draft           semantic-content-pkgs            April 13, 2012
 
 Table of Contents
 
-   1. Introduction ....................................................?
-      1.1. Motivation .................................................?
-      1.2. Notational Conventions .....................................?
-   2. The SCP Data Structure ..........................................?
-   3. The SCP RDF Vocabulary ..........................................?
-      3.1. Bytestream .................................................?
-      3.2. ContentLocation ............................................?
-           3.2.1. ResolvableURI .......................................?
-           3.2.2. PackagePath .........................................?
-      3.3. Package ....................................................?
-      3.4. PackageType ................................................?
-   4. The SCP Format ..................................................?
-      4.1. Directory Structure ........................................?
-      4.2. ZIP-based Serialization ....................................?
-      4.3. Examples ...................................................?
-   5. IANA Considerations .............................................?
-   6. Security Considerations .........................................?
-   7. Normative References ............................................?
-   Appendix A.  SCP-OWL-Ontology.ttl ..................................?
+   1. Introduction ....................................................2
+      1.1. Motivation .................................................2
+      1.2. Notational Conventions .....................................3
+   2. The SCP Data Structure ..........................................3
+   3. The SCP RDF Vocabulary ..........................................3
+      3.1. Bytestream .................................................3
+      3.2. ContentLocation ............................................3
+           3.2.1. ResolvableURI .......................................4
+           3.2.2. PackagePath .........................................4
+      3.3. Package ....................................................4
+      3.4. PackageType ................................................4
+   4. The SCP Format ..................................................4
+      4.1. Directory Structure ........................................4
+      4.2. ZIP-based Serialization ....................................4
+      4.3. Examples ...................................................5
+   5. IANA Considerations .............................................6
+   6. Security Considerations .........................................6
+   7. Normative References ............................................6
+   Appendix A.  SCP-OWL-Ontology.ttl ..................................7
 
 1. Introduction
 
@@ -288,7 +288,9 @@ Internet Draft           semantic-content-pkgs            April 13, 2012
 
 4.3.  Examples
 
-   The following examples show packages
+   The following examples show packages in a directory structure.  They
+   may be trivially serialized a .scp files or stored in some other
+   structure as well.
 
 4.3.1.  A Minimal Package
 
@@ -324,8 +326,6 @@ Internet Draft           semantic-content-pkgs            April 13, 2012
    |  (binary data)
    |
    -- .scpi/
-       |
-       | id
  
 
 
@@ -334,6 +334,8 @@ C. Wilper               Expires October 15, 2012                [Page 6]
 Internet Draft           semantic-content-pkgs            April 13, 2012
 
 
+       |
+       | id
        |  (http://example.org/pkg2)
        |
        | graph.ttl (
@@ -380,8 +382,6 @@ Internet Draft           semantic-content-pkgs            April 13, 2012
    [RFC3986]  Berners-Lee, T., Fielding, R., and L. Masinter, "Uniform
               Resource Identifier (URI): Generic Syntax", STD 66, RFC
               3986, January 2005.
-
-   [W3C.SUBM-turtle-20110328]
  
 
 
@@ -390,6 +390,7 @@ C. Wilper               Expires October 15, 2012                [Page 7]
 Internet Draft           semantic-content-pkgs            April 13, 2012
 
 
+   [W3C.SUBM-turtle-20110328]
               Beckett, T. and Berners-Lee, T., "Turtle - Terse RDF
               Triple Language", W3C Team Submission
               SUBM-turtle-20110328, March 2011,
@@ -437,7 +438,6 @@ Authors' Addresses
 
    Chris Wilper
    NY
-   USA
  
 
 
@@ -446,9 +446,9 @@ C. Wilper               Expires October 15, 2012                [Page 8]
 Internet Draft           semantic-content-pkgs            April 13, 2012
 
 
+   USA
+
    Email: cwilper@gmail.com
-
-
 
 
 
